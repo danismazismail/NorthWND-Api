@@ -14,10 +14,8 @@ NorthWND-Api, Entity Framework Core kullanılarak veri erişimi sağlayan ve MSS
 
 ## API Belgeleri
 
-### Temel URL
-`https://api.projeniz.com`
-
-### Uç Noktalar
+### URL
+`[https://api.projeniz.com](https://github.com/danismazismail/NorthWND-Api)`
 
 #### Tüm Öğeleri Getir
 
