@@ -2,7 +2,7 @@
 
 ![C#](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/C_Sharp_wordmark.svg/200px-C_Sharp_wordmark.svg.png)
 ![ASP.NET Core](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/200px-.NET_Core_Logo.svg.png) 
-![Entity Framework Core](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Entity_Framework_Logo.svg/200px-Entity_Framework_Logo.svg.png) 
+![Entity Framework Core](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*3kqmR2q4TFsdFX71DGbQZQ.png) 
 ![MSSQL](https://user-images.githubusercontent.com/4249331/52232852-e2c4f780-28bd-11e9-835d-1e3cf3e43888.png) 
 ![PostgreSQL](https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/200px-Postgresql_elephant.svg.png) 
 ![Visual Studio](https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Visual_Studio_Icon_2019.svg/200px-Visual_Studio_Icon_2019.svg.png) 
