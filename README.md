@@ -12,21 +12,6 @@
 
 NorthWND-Api, Entity Framework Core kullanılarak veri erişimi sağlayan ve MSSQL ve PostgreSQL gibi çeşitli veritabanlarını destekleyen bir ASP.NET Core Web API projesidir.
 
-## Kullanılan Teknolojiler
-
-### Backend
-- ![C#](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/C_Sharp_wordmark.svg/200px-C_Sharp_wordmark.svg.png) C#
-- ![ASP.NET Core](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/200px-.NET_Core_Logo.svg.png) ASP.NET Core
-- ![Entity Framework Core](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Entity_Framework_Logo.svg/200px-Entity_Framework_Logo.svg.png) Entity Framework Core
-
-### Veritabanları
-- ![MSSQL](https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Microsoft_SQL_Server_Logo.svg/200px-Microsoft_SQL_Server_Logo.svg.png) MSSQL
-
-### Araçlar
-- ![Visual Studio](https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Visual_Studio_Icon_2019.svg/200px-Visual_Studio_Icon_2019.svg.png) Visual Studio
-- ![Git](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/200px-Git-logo.svg.png) Git
-- ![GitHub](https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/200px-Octicons-mark-github.svg.png) GitHub
-
 ## API Belgeleri
 
 ### Temel URL
