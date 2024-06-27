@@ -20,28 +20,33 @@ NorthWND-Api, Entity Framework Core kullanılarak veri erişimi sağlayan ve MSS
 
 #### Tüm Öğeleri Getir
 
-- **URL**: `/api/items`
+- **URL**: `~/api/GetAllProductAsync`
 - **Metod**: `GET`
 - **Açıklama**: Tüm öğelerin listesini getirir.
 - **Yanıt**:
     ```json
     [
-        {
-            "id": 1,
-            "name": "Öğe 1",
-            "description": "Öğe 1'in açıklaması"
-        },
-        {
-            "id": 2,
-            "name": "Öğe 2",
-            "description": "Öğe 2'nin açıklaması"
-        }
-    ]
+    {
+        "productID": 3,
+        "productName": "Aniseed Syrup",
+        "unitPrice": 10.0000,
+        "unitsInStock": 13,
+        "categoryID": 2,
+        "categoryName": "YaptımmmmmmOldu"
+    },
+    {
+        "productID": 40,
+        "productName": "Boston Crab Meat",
+        "unitPrice": 18.4000,
+        "unitsInStock": 123,
+        "categoryID": 8,
+        "categoryName": "hedebidi"
+    },
     ```
 
 #### ID'ye Göre Öğe Getir
 
-- **URL**: `/api/items/{id}`
+- **URL**: `/api/GetDetailAsync/{id}`
 - **Metod**: `GET`
 - **Açıklama**: Belirtilen ID'ye sahip bir öğeyi getirir.
 - **Parametreler**:
@@ -49,17 +54,26 @@ NorthWND-Api, Entity Framework Core kullanılarak veri erişimi sağlayan ve MSS
 - **Yanıt**:
     ```json
     {
-        "id": 1,
-        "name": "Öğe 1",
-        "description": "Öğe 1'in açıklaması"
-    }
+    "productID": 3,
+    "productName": "Aniseed Syrup",
+    "supplierID": null,
+    "supplierCompanyName": null,
+    "categoryID": null,
+    "categoryName": null,
+    "quantityPerUnit": "12 - 550 ml bottles",
+    "unitPrice": 10.0000,
+    "unitsInStock": 13,
+    "unitsOnOrder": 70,
+    "reorderLevel": 25,
+    "discontinued": false
+}
     ```
 
 #### Yeni Öğe Oluştur
 
-- **URL**: `/api/items`
+- **URL**: `/api/addOrderWithDetails`
 - **Metod**: `POST`
-- **Açıklama**: Yeni bir öğe oluşturur.
+- **Açıklama**: Yeni bir sipariş oluşturur.
 - **İstek Gövdesi**:
     ```json
     {
