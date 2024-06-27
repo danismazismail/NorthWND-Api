@@ -15,9 +15,6 @@ namespace MyApi.Logs
                 
         }
         public abstract void DoLog(T logSubject, DateTime logDate, string logState);
-        //public void hede()
-        //{
-        //    //db ye sunu aaşlskd
-        //}
+        
     }
 }

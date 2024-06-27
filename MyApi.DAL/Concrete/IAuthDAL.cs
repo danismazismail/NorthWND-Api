@@ -9,10 +9,6 @@ namespace MyApi.DAL.Interfaces
 {
     public interface IAuthDAL
     {
-        //kendini tanıtma login 
-        //kendini kaydetme / signup
-        //kontrol etme / user exist
-
         Task<User> Register(User user, string password);
 
         Task<User> Login(string username,string password);

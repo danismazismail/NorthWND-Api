@@ -10,7 +10,7 @@ namespace MyApi.Logs
 {
     public class JsonFileLogger<T> : LogBase<T> where T : class
     {
-        public JsonFileLogger(string fileName = "yzl8150.json", string filePath = "C:\\")
+        public JsonFileLogger(string fileName = "danis.json", string filePath = "C:\\")
         {
             _fileName = fileName;
             _filePath = filePath;

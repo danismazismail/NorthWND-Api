@@ -40,22 +40,6 @@ namespace MyApi.Apis.Controllers
         {
             return Ok(await _dal.GetProductListToCategoryAsync(categoryId));
         }
-
-
-
-
-
-
-
-
-
-
-        //[NonAction]
-        //public IActionResult Husamettin()
-        //{
-
-        //    return Ok(_dal.GetProductListForDropDown());
-
-        //}
+        
     }
 }

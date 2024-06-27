@@ -22,18 +22,6 @@ namespace MyApi.DAL.Concrete
             _myAppDbContext = myAppDbContext;
 
         }
-        /// <summary>
-        //sipariş nedemek ?
-        //orders -order details  ve products
-        //orders 1 kayıt , order details a çok kayıt, order details a eklenen kadar urunun products (stok) tan düşürülmesi.
-        //dikkat edilecekler ne?
-        //validation. => varsa log tablosu log kaydı alınmalı.
-        //işler ters giderse bu api ne yapacak.
-        //transaction rollback , bad request gibi bir hata mesajı dönülmeli. 
-
-        /// </summary>
-        /// <param name="dto"></param>
-        /// <returns></returns>
         public bool AddOrderWithDetails(AddOrderDTO dto)
         {
             if (dto ==null || dto.OrderDetails==null || dto.OrderInfo==null)
@@ -76,8 +64,6 @@ namespace MyApi.DAL.Concrete
                                 Quantity = orderDetail.Quantity,
                                 UnitPrice = orderDetail.UnitPrice
                             });
-
-                            //pro dan units in stok değerini bul quantitiy kadar düş.
 
                             var updateProduct = _myAppDbContext.Products.Where(a => a.ProductID == orderDetail.ProductID).SingleOrDefault();
                             updateProduct.UnitsInStock -= orderDetail.Quantity;

@@ -8,19 +8,33 @@ namespace MyApi.Common
 {
     public static class StringExtensions
     {
-        public static bool IsInCode(this string s,string value)
+        public static Dictionary<string, bool> IsInCode(this string s,string value)
         {
-            //value değişken içinde kod var mı ?
-            //içinde kod yok.
-            return false;
-        
+            List<string> keywords = new List<string> { "if", "else", "for", "foreach", "while", "switch", "case", "do", "try", "catch", "finally" };
+
+            Dictionary<string, bool> result = new Dictionary<string, bool>();
+
+            foreach (string keyword in keywords)
+            {
+                result[keyword] = value.Contains(keyword);
+            }
+
+            return result;
+
         }
 
-        public static bool IsInAlphaNumericCharacter(this string s, string value)
+        public static bool IsInAlphaNumericCharacter(this string s)
         {
-            //value değişken içinde AlphaNumericCharacter var mı ?
-            //AlphaNumericCharacter= ?!&%
-            //içinde kod yok.
+            char[] alphaNumericCharacters = new char[] { '?', '!', '&', '%' };
+                        
+            foreach (char item in alphaNumericCharacters)
+            {
+                if (s.Contains(item))
+                {
+                    return true;
+                }
+            }
+
             return false;
         }
     }

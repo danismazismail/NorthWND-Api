@@ -26,8 +26,6 @@ namespace MyApi.DAL.Concrete
             }).ToListAsync();
         }
 
-        //urunun Id sine göre detay gösteren method????
-
         public async Task<ProductDetailDTO> GetProductDetailByProductIDAsync(int getDetailsProductID)
         {
             var x = await _context.Products.Where(a => a.IsActive == true && a.ProductID == getDetailsProductID).Select(a => new ProductDetailDTO()

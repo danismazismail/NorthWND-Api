@@ -18,10 +18,8 @@ namespace MyApi.DAL.Concrete
             _db = db;
 
         }
-        //melike 123
         public async Task<User> Login(string username, string password)
         {
-            //token uretmeye uygun olup olmadığını belirle.
             User user = _db.User.FirstOrDefault(a => a.UserName == username.Trim());
 
             if (user == null)
@@ -29,7 +27,6 @@ namespace MyApi.DAL.Concrete
                 return null;
             }
 
-            //kontrol et.
             if (!ControlPassword(password, user.PassSalt, user.PasswordHash))
             {
                 return null;
@@ -43,12 +40,7 @@ namespace MyApi.DAL.Concrete
             using (var hmac = new HMACSHA512(passSalt))
             {
                 var passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
-
-                //if (ReferenceEquals(passwordHash,passHash))
-                //{
-                //return true
-                //}
-                //return false;
+                             
 
                 for (int i = 0; i < passwordHash.Length; i++)
                 {
@@ -64,9 +56,7 @@ namespace MyApi.DAL.Concrete
 
         public async Task<User> Register(User user, string password)
         {
-            //todo kontrol et.
-           // if ( await _db.User.Where(a=>a.UserName==user.UserName).FirstOrDefaultAsync() ==null)
-
+            
             if(! await UserExist(user.UserName))
             {
                 byte[] passHash, passSalt;
@@ -77,7 +67,6 @@ namespace MyApi.DAL.Concrete
 
                 await _db.User.AddAsync(user);
                 await _db.SaveChangesAsync();
-                //todo kontrol ederek dön.
                 return user;
             }
             return null;

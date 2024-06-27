@@ -47,9 +47,6 @@ namespace MyApi.Apis.Controllers
                 Expires = DateTime.Now.AddMinutes(20),
                 Subject = new ClaimsIdentity(new Claim[] {
                 new Claim(ClaimTypes.Name,userinfo.UserName)
-                //new Claim(ClaimTypes.Name,userinfo.UserName)
-                //new Claim(ClaimTypes.Name,userinfo.UserName)
-                //new Claim(ClaimTypes.Name,userinfo.UserName)
                 }),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(secretKey), SecurityAlgorithms.HmacSha512Signature)
 
@@ -69,12 +66,9 @@ namespace MyApi.Apis.Controllers
             var user = await _authDAL.Register(new Core.User() { UserName = userinfo.UserName }, userinfo.Password);
             if (user == null)
             {
-                return BadRequest("böyle bir kullanıcı zaten var. başka bir username ile kayıt olmayı deneyiniz. ");
+                return BadRequest("Böyle bir kullanıcı zaten var. başka bir username ile kayıt olmayı deneyiniz. ");
 
-            }
-
-            //  return Ok(user);
-            //created  
+            }                        
             return StatusCode(201);
         }
 

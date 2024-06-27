@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyApi.EH
 {
-    /// <summary>
-    /// satış kaydındaki sipariş var ama detayı yokken gibi durumlarda fırlatılacak EX turu
-    /// </summary>
+    
     public class BLLEX : EXBase
     {
         public BLLEX(string? msg) : base(msg)
